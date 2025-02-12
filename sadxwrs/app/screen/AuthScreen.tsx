@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { View, Text, StyleSheet, Button} from 'react-native'; 
 import { TextInput } from 'react-native-gesture-handler';
-import { app } from '../firebaseConfig';
+import { app, database } from '../firebaseConfig';
 import { getAuth, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigation } from 'expo-router';
 
@@ -51,7 +51,8 @@ export default function AuthScreen() {
     
     }
 
-
+    // console.log(database);
+    
 
 
   return ( 
@@ -64,6 +65,7 @@ export default function AuthScreen() {
         <Button title="Connexion" onPress={signIn} />
         <Button title="Déconnexion" onPress={loggOut} />
         { user ? <Text> Bienvenue, {user} </Text> : null }
+        
         
     </View> 
   ); 
