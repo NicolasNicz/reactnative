@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
 
       button_container: {
         flex: 1, 
-        flexDirection:'row'
+        // flexDirection:'row'
       },
       subtitle: { 
         fontSize: 18, 
