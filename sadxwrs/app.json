@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "MonProjetExo4",
-    "slug": "MonProjetExo4",
+    "name": "sadxwrs",
+    "slug": "sadxwrs",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -12,7 +12,6 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "com.habaresnicolas.MonProjetExo4",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -37,15 +36,6 @@
     ],
     "experiments": {
       "typedRoutes": true
-    },
-    "extra": {
-      "router": {
-        "origin": false
-      },
-      "eas": {
-        "projectId": "c0b4209c-caa0-44d8-98f9-ec0a4984f4c4"
-      }
-    },
-    "owner": "hnicolas"
+    }
   }
 }
