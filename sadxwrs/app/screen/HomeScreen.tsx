@@ -12,8 +12,11 @@ export default function HomeScreen({navigation, route}: any) {
           <TouchableOpacity activeOpacity={0.8} style={styles.menu_button} onPress={() => navigation.navigate('AuthScreen')}>
               <Text style={styles.menu_button_text}> Authentification </Text>
           </TouchableOpacity>
-          <TouchableOpacity activeOpacity={0.8} style={styles.menu_button} onPress={() => navigation.navigate('Profils')} >
-              <Text style={styles.menu_button_text}> Profils </Text>
+          <TouchableOpacity activeOpacity={0.8} style={styles.menu_button} onPress={() => navigation.navigate('AddScreen')}>
+              <Text style={styles.menu_button_text}> Ajouter </Text>
+          </TouchableOpacity>
+          <TouchableOpacity activeOpacity={0.8} style={styles.menu_button} onPress={() => navigation.navigate('ProfileScreen')} >
+              <Text style={styles.menu_button_text}> Consulter </Text>
           </TouchableOpacity>
         </View>
         
@@ -52,7 +55,7 @@ const styles = StyleSheet.create({
       justifyContent:'center',
       alignItems:'center',  
       width:"100%",
-      height:"50%",
+      height:"33.35%",
       backgroundColor: 'rgba(1, 0, 47, 0.92)',
     },
     menu_button_text:{

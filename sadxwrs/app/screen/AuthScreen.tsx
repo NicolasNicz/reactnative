@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { View, Text, StyleSheet, Button} from 'react-native'; 
+import { View, Text, StyleSheet, ImageBackground, Button} from 'react-native'; 
 import { TextInput } from 'react-native-gesture-handler';
 import { app, database } from '../firebaseConfig';
 import { getAuth, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
@@ -50,24 +50,22 @@ export default function AuthScreen() {
       })
     
     }
-
-    // console.log(database);
     
 
 
   return ( 
-    <View style={styles.container}> 
-        <Text style={styles.subtitle}>Exo 7 Stockage local et authentification 🎉</Text> 
 
-        <TextInput placeholder="Email" value={email} onChangeText={setEmail} style={styles.buttontitle} />
-        <TextInput placeholder="Mot de passe" secureTextEntry value={password} onChangeText={setPassword} style={styles.buttontitle} />
-        <Button title="Inscription" onPress={signUp} />
-        <Button title="Connexion" onPress={signIn} />
-        <Button title="Déconnexion" onPress={loggOut} />
-        { user ? <Text> Bienvenue, {user} </Text> : null }
-        
-        
-    </View> 
+        <ImageBackground source={require('../../assets/images/background.jpg')} style={styles.container}>
+
+          <TextInput placeholder="Email" value={email} onChangeText={setEmail} style={styles.buttontitle} />
+          <TextInput placeholder="Mot de passe" secureTextEntry value={password} onChangeText={setPassword} style={styles.buttontitle} />
+          <Button title="Inscription" onPress={signUp} />
+          <Button title="Connexion" onPress={signIn} />
+          <Button title="Déconnexion" onPress={loggOut} />
+          { user ? <Text style={styles.subtitle}> Bienvenue, {user} </Text> : null }
+
+        </ImageBackground>
+
   ); 
 } 
 const styles = StyleSheet.create({ 
@@ -84,8 +82,10 @@ const styles = StyleSheet.create({
       },
       subtitle: { 
         fontSize: 18, 
-        color: '#555', 
+        color: '#fff', 
         marginTop: 10, 
+        backgroundColor: 'rgba(21, 21, 46, 1)',
+        borderRadius: 5
       },
       listtitle:{
         fontWeight: 'bold',
